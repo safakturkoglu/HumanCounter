@@ -1,7 +1,7 @@
 # Human Counter
 
 ## Aim of Project
-Canlı görüntüdeki kişileri sürekli olarak sayacak ve zaman grafiğinde gösterecek bir yazılım geliştirdim. Bazı hazır algoritmaları da bu projede kullandım. Gerekli kısımlarda açıklamalarını yazdım ve kodda da yorum satırlarında açıkladım. Bu projeyi Phyton da programladım. Görüntü alındıktan sonra oluşturulan veri ile web sayfası üzerinden kullanıcı bilgilendirildi. Kullanıcıya 30 saniyede bir veri iletilir. Kullanıcı grafikte tarihi, saati ve toplam kişi sayısına ulaşabilir.
+Bu projede canlı görüntüdeki kişileri sürekli olarak sayacak ve zaman grafiğinde gösterecek bir algoritma geliştirdim. Bazı algoritmaları da bu projede referans olarak kullandım. Bu projeyi Phyton dilinde yazdım ve OpenCV kütüphanesini kullandım. Çeşitli algoritmalar sonucunda görüntü işlendikten sonra gerçek zamanlı oluşturulan veri ile web sayfası üzerinden kullanıcı bilgilendirildi. Kullanıcıya 30 saniyede bir veri iletilir. Kullanıcı grafikte tarihi, saati ve toplam kişi sayısına ulaşabilir.
 
 
 ## Yolo
