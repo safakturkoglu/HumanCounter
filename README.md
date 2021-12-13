@@ -1,17 +1,17 @@
 # Human Counter
 
 ## Aim of Project
-Bu projede canlı görüntüdeki kişileri sürekli olarak sayacak ve zaman grafiğinde gösterecek bir algoritma geliştirdim. Bazı algoritmaları da bu projede referans olarak kullandım. Bu projeyi Phyton dilinde yazdım ve OpenCV kütüphanesini kullandım. Çeşitli algoritmalar sonucunda görüntü işlendikten sonra gerçek zamanlı oluşturulan veri ile web sayfası üzerinden kullanıcı bilgilendirildi. Kullanıcıya 30 saniyede bir veri iletilir. Kullanıcı grafikte tarihi, saati ve toplam kişi sayısına ulaşabilir.
+In this project, I developed an algorithm that will count the people in the live view continuously and display them on the time graph. I also used and developed some algorithms as a reference in this project. I wrote this project in Python and used the OpenCV library. After processing the image as a result of various algorithms, the user was informed via the web page with the data generated in real time. Data is transmitted to the user every 30 seconds. The user can access the date, time and total number of people on the chart.
 
 
-## Yolo
- YOLO, konvolüsyonel sinir ağlarını kullanarak nesne tespiti yapan bir algoritmadır. YOLO algoritması çalışmaya başladığında görüntülerdeki veya videolardaki nesneleri ve bu nesnelerin koordinatlarını aynı anda tespit eder. 
-Video ve resim işleme arasında tek fark resimlerin tek bir kareden (frame), videoların ise birçok kareden oluşmasıdır. Resimlerde algoritma tek bir kare için çalışırken, videolarda tüm kareler için tekrar tekrar çalışır.  
+## YOLO
+YOLO is an algorithm for object detection using convolutional neural networks. When the YOLO algorithm starts working, it detects objects in images or videos and their coordinates at the same time.
+The only difference between video and image processing is that images consist of a single frame, while videos consist of many frames. The algorithm works for a single frame in images, while in videos it works repeatedly for all frames. 
 
 ## Working Principle of YOLO Algorithm
-YOLO algoritması, öncelikle görüntüyü bölgelere ayırır. Daha sonra her bir bölgedeki nesneleri çevreleyen kutuları (bounding box) çizer ve her bir bölgede nesne bulunma olasılığı ile ilgili bir hesabı yapar.
+YOLO algorithm first divides the image into regions. It then draws the bounding boxes surrounding the objects in each region and calculates the probability of finding an object in each region.
 
-Ayrıca her bir bounding box için bir güven skoru hesaplar. Bu skor bize o nesnenin yüzde kaç olasılıkla tahmin edilen nesne olduğunu söyler. Örneğin, bulunan bir araba için güven skoru 0,3 ise bunun anlamı o nesnenin araba olma olasığının oldukça düşük olduğudur. Diğer bir deyişle, YOLO yaptığı tahminin güvenilmez olduğunu bize söyler.  Bounding box’ların içindeki nesnelere non-maximum suppression denen bir teknik uygulanır. Bu teknik güven skoru düşük olan nesneleri değerlendirmeden çıkarır ve aynı bölgede güven skoru daha yüksek bir bounding box‘ın varlığını kontrol eder.
+It also calculates a confidence score for each bounding box. This score tells us with what percent probability the object is the predicted object. A technique called non-maximum suppression is applied to the objects inside the bounding boxes. This technique excludes objects with a lower confidence score from evaluation and checks for the presence of a higher confidence bounding box in the same region.
   
   ![frame2](https://user-images.githubusercontent.com/95358360/145855221-e3e4186e-fd7f-47b6-b65f-3747e5d5e5a8.PNG)
   
