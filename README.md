@@ -15,9 +15,9 @@ It also calculates a confidence score for each bounding box. This score tells us
   
   ![frame2](https://user-images.githubusercontent.com/95358360/145855221-e3e4186e-fd7f-47b6-b65f-3747e5d5e5a8.PNG)
   
-  It is investigated whether there are objects in each region. If an object is found, its midpoint, height, and width are found. Then the bounding box is drawn. In order to do this, a number of sub-processes must be performed. A prediction vector is generated for each region. These vectors include the confidence score.
+It is investigated whether there are objects in each region. If an object is found, its midpoint, height, and width are found. Then the bounding box is drawn. A number of sub-processes must be performed for this. A prediction vector is generated for each region. These vectors include the confidence score.
 
-If the confidence score is 0, there is no object there, and if it is 1, there is an object there. More than one bounding box can be drawn for the same object within the same. non-maximum suppression technique is used to get rid of this problem. The aim is, what is done with this technique is simply that the bounding box with the highest confidence score stays and the others are removed from the view. After all operations, the following output is accessed:
+If the confidence score is 0, there is no object there, and if it is 1, there is an object there. More than one bounding box can be drawn for the same object within the same. Non-maximum suppression technique is used to get rid of this problem. The aim is, what is done with this technique is simply that the bounding box with the highest confidence score stays and the others are removed from the view. After all operations, the following output is accessed:
   
  
  ![frame3](https://user-images.githubusercontent.com/95358360/145855367-61c8c461-17ab-45e2-bd1a-fd482b8ae107.PNG)
