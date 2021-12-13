@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Sayfa ile ilgili genel bilgiler ve kütüphaneler
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Counter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+</head>
+
+<!--
+    Arayüz tasarımı ve scriptler
+-->
+<body>
+    
+    <!-- Zamana bağlı grafik -->
+    <h1>Time Square - New York</h1>
+    <br />
+
+    <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+    
+    <!-- Fonksiyonlar ve işlemlerin bulunduğu script -->
+    <script>
+
+        //Firebase'e bağlanmak için gerekli config dosyaları
+        const firebaseConfig = {
+            apiKey: "AIzaSyCoXWDX9k8Thj5S0TSbufOB3eCnJip-bdg",
+            authDomain: "humancounter-eefad.firebaseapp.com",
+            databaseURL: "https://humancounter-eefad-default-rtdb.firebaseio.com",
+            projectId: "humancounter-eefad",
+            storageBucket: "humancounter-eefad.appspot.com",
+            messagingSenderId: "403983421581",
+            appId: "1:403983421581:web:8f813b51e5794a3b2452c4",
+            measurementId: "${config.measurementId}"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        time_array = [];
+        count_array = [];
+
+        //Firebase'deki verileri çekmek ve grafik oluşturmak için oluşturulan fonksiyon
+        function FetchAllDataAndChart() {
+            firebase.database().ref('Counter').once('value', function (snapshot) {
+                snapshot.forEach(
+                    function (ChildSnapshot) {
+                        let time = ChildSnapshot.val().Time;
+                        let count = ChildSnapshot.val().Count;
+                        
+                        time_array.push(String(time));
+                        count_array.push(count);
+
+                        var xValues = time_array;
+                        var yValues = count_array;
+                        
+                        //Create Chart
+                        new Chart("myChart", {
+                            type: "line",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    fill: false,
+                                    lineTension: 0,
+                                    backgroundColor: "rgba(0,0,255,1.0)",
+                                    borderColor: "rgba(0,0,255,0.1)",
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: { display: false },
+                                scales: {
+                                    yAxes: [{ ticks: { min: 0, max: 90 } }],
+                                }
+                            }
+                        });
+                    }
+                )
+            })
+        }
+        //Fonksiyonu çalıştırma
+        FetchAllDataAndChart();
+
+        //30 saniyede bir sayfa yenilenir ve Firebase'den veriler çekilir.
+        setTimeout(function () {
+            window.location.reload(1);
+        }, 30000);
+
+    </script>
+
+</body>
+
+</html>
