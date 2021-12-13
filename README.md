@@ -29,6 +29,10 @@ drive.mount('/content/gdrive')
 %cd ./MyDrive/task-1 
 ```
 
+## Output
+
+
+![12-12-2021 17_40_27](https://user-images.githubusercontent.com/95358360/145829827-843a498a-8bf9-4eab-8764-bfc94a78b569.jpg)
 
 
 ## Firebase
