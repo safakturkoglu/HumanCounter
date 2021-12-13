@@ -15,9 +15,9 @@ It also calculates a confidence score for each bounding box. This score tells us
   
   ![frame2](https://user-images.githubusercontent.com/95358360/145855221-e3e4186e-fd7f-47b6-b65f-3747e5d5e5a8.PNG)
   
-  Her bir bölgede nesne olup olmadığı araştırılır. Eğer bir nesne bulunursa o nesnenin orta noktası, yüksekliği ve genişliği bulunur. Daha sonra bounding box çizilir. Bunun yapılabilmesi için bir takım alt işlemlerin yapılması gerekir. Her bir bölge için bir tahmin vektörü oluşturulur. Bu vektörlerin içinde güven skoru yer alır. 
+  It is investigated whether there are objects in each region. If an object is found, its midpoint, height, and width are found. Then the bounding box is drawn. In order to do this, a number of sub-processes must be performed. A prediction vector is generated for each region. These vectors include the confidence score.
 
-Eğer güven skoru 0 ise orada nesne yok, 1 ise orada nesne var demektir. Aynı içerisindeki aynı nesne için birden fazla bounding box çizdirilebilir. Bu sorundan kurtulmak için non-maximum suppression tekniği kullanılır. Bu teknik ile yapılan şey basitçe, en yüksek güven skoru olan bounding box’ın kalması diğerlerinin ise görüntüden atılmasıdır. Tüm işlemlerden sonra aşağıdaki çıktıya erişilir:
+If the confidence score is 0, there is no object there, and if it is 1, there is an object there. More than one bounding box can be drawn for the same object within the same. non-maximum suppression technique is used to get rid of this problem. The aim is, what is done with this technique is simply that the bounding box with the highest confidence score stays and the others are removed from the view. After all operations, the following output is accessed:
   
  
  ![frame3](https://user-images.githubusercontent.com/95358360/145855367-61c8c461-17ab-45e2-bd1a-fd482b8ae107.PNG)
@@ -45,7 +45,7 @@ drive.mount('/content/gdrive')
 
 
 ## Firebase
-Google Firebase; It is a platform that allows user login authorization and data to be kept in real time and synchronously without the need for the developer to deal with the server side of web and mobile applications. With the realtime database, the necessary information reaches the user. [Times Square](https://www.youtube.com/watch?v=AdUw5RdyZxI ) bu bağlantıdaki canlı görüntüdeki kişiler sürekli olarak sayılıyor ve zaman grafiğinde gösteriliyor. 
+Google Firebase; It is a platform that allows user login authorization and data to be kept in real time and synchronously without the need for the developer to deal with the server side of web and mobile applications. With the realtime database, the necessary information reaches the user. People in live view in this link [Times Square](https://www.youtube.com/watch?v=AdUw5RdyZxI ) are counted continuously and displayed on time graph.
 
 
 
