@@ -1,13 +1,18 @@
 # Human Counter
 
 ## Aim of Project
+Canlı görüntüdeki kişileri sürekli olarak sayacak ve zaman grafiğinde gösterecek bir yazılım geliştirdim. Bazı hazır algoritmaları da bu projede kullandım. Gerekli kısımlarda açıklamalarını yazdım ve kodda da yorum satırlarında açıkladım. Bu projeyi Phyton da programladım. Görüntü alındıktan sonra oluşturulan veri web sayfası üzerinden kullanıcıya bilgilendirildi. Kullanıcıya 30 saniyede bir veri iletilir. Kullanıcı grafikte tarihi, saati ve toplam kişi sayısına ulaşabilir.
 
-## Algorithm
 
 ## Yolo
 YOLO v3 algorithm flow chart A convolutional neural network usually consists of an input layer, a convolutional layer, a pooling layer, and an output layer. The network inputs a two-dimensional image, and the convolution layer extracts and maps the detailed features of the image through the form of a sliding window; the pooling layer downsamples the input feature image, thereby reducing the computational complexity and extracting the main features on the one hand. The image feature information is extracted by convolving.
 
 ![YOLO](https://www.researchgate.net/publication/337451395/figure/fig2/AS:828207003602944@1574471345168/YOLO-v3-algorithm-flow-chart-A-convolutional-neural-network-usually-consists-of-an-input.jpg)
+
+## How does YOLO work?
+Prior detection systems use localizers or classifiers to carry out the detection process. Then the model is applied to an image at different scales and locations. The regions of the image with High scoring are considered for detections.
+
+YOLO algorithm uses a completely different approach. The algorithm applies a single neural network to the entire full image. Then this network divides that image into regions which provides the bounding boxes and also predicts probabilities for each region. These generated bounding boxes are weighted by the predicted probabilities.
 
 
 ### Colab between Drive Mount
