@@ -5,14 +5,22 @@ Bu projede canlı görüntüdeki kişileri sürekli olarak sayacak ve zaman graf
 
 
 ## Yolo
-YOLO v3 algorithm flow chart A convolutional neural network usually consists of an input layer, a convolutional layer, a pooling layer, and an output layer. The network inputs a two-dimensional image, and the convolution layer extracts and maps the detailed features of the image through the form of a sliding window; the pooling layer downsamples the input feature image, thereby reducing the computational complexity and extracting the main features on the one hand. The image feature information is extracted by convolving.
+ YOLO, konvolüsyonel sinir ağlarını (CNN) kullanarak nesne tespiti yapan bir algoritmadır. YOLO algoritması çalışmaya başladığında görüntülerdeki veya videolardaki nesneleri ve bu nesnelerin koordinatlarını aynı anda tespit eder. 
+Video ve resim işleme arasında tek fark resimlerin tek bir kareden (frame), videoların ise birçok kareden oluşmasıdır. Resimlerde algoritma tek bir kare için çalışırken, videolarda tüm kareler için tekrar tekrar çalışır.  
 
-![YOLO](https://www.researchgate.net/publication/337451395/figure/fig2/AS:828207003602944@1574471345168/YOLO-v3-algorithm-flow-chart-A-convolutional-neural-network-usually-consists-of-an-input.jpg)
+## Working Principle of YOLO Algorithm
+YOLO algoritması, öncelikle görüntüyü bölgelere ayırır. Daha sonra her bir bölgedeki nesneleri çevreleyen kutuları (bounding box) çizer ve her bir bölgede nesne bulunma olasılığı ile ilgili bir hesabı yapar.
 
-## How does YOLO work?
-Prior detection systems use localizers or classifiers to carry out the detection process. Then the model is applied to an image at different scales and locations. The regions of the image with High scoring are considered for detections.
+Ayrıca her bir bounding box için bir güven skoru hesaplar. Bu skor bize o nesnenin yüzde kaç olasılıkla tahmin edilen nesne olduğunu söyler. Örneğin, bulunan bir araba için güven skoru 0,3 ise bunun anlamı o nesnenin araba olma olasığının oldukça düşük olduğudur. Diğer bir deyişle, YOLO yaptığı tahminin güvenilmez olduğunu bize söyler.  Bounding box’ların içindeki nesnelere non-maximum suppression denen bir teknik uygulanır. Bu teknik güven skoru düşük olan nesneleri değerlendirmeden çıkarır ve aynı bölgede güven skoru daha yüksek bir bounding box‘ın varlığını kontrol eder.
+  
+  ![frame2](https://user-images.githubusercontent.com/95358360/145855221-e3e4186e-fd7f-47b6-b65f-3747e5d5e5a8.PNG)
+  
+  Her bir bölgede nesne olup olmadığı araştırılır. Eğer bir nesne bulunursa o nesnenin orta noktası, yüksekliği ve genişliği bulunur. Daha sonra bounding box çizilir. Bunun yapılabilmesi için bir takım alt işlemlerin yapılması gerekir. Her bir bölge için bir tahmin vektörü oluşturulur. Bu vektörlerin içinde güven skoru yer alır. 
 
-YOLO algorithm uses a completely different approach. The algorithm applies a single neural network to the entire full image. Then this network divides that image into regions which provides the bounding boxes and also predicts probabilities for each region. These generated bounding boxes are weighted by the predicted probabilities.
+Eğer güven skoru 0 ise orada nesne yok, 1 ise orada nesne var demektir. Aynı içerisindeki aynı nesne için birden fazla bounding box çizdirilebilir. Bu sorundan kurtulmak için non-maximum suppression tekniği kullanılır. Bu teknik ile yapılan şey basitçe, en yüksek güven skoru olan bounding box’ın kalması diğerlerinin ise görüntüden atılmasıdır. Tüm işlemlerden sonra aşağıdaki çıktıya erişilir:
+  
+ 
+ ![frame3](https://user-images.githubusercontent.com/95358360/145855367-61c8c461-17ab-45e2-bd1a-fd482b8ae107.PNG)
 
 
 ### Colab between Drive Mount
