@@ -40,7 +40,8 @@ drive.mount('/content/gdrive')
 ## Output
 
 
-![12-12-2021 17_40_27](https://user-images.githubusercontent.com/95358360/145829827-843a498a-8bf9-4eab-8764-bfc94a78b569.jpg)
+![frame4](https://user-images.githubusercontent.com/95358360/145856514-812fe7e8-9e72-4fef-b832-dc637542e6e0.PNG)
+
 
 
 ## Firebase
@@ -48,8 +49,7 @@ Google Firebase; It is a platform that allows user login authorization and data 
 
 
 
-
- ![Time Square](https://user-images.githubusercontent.com/95358360/145819788-e13f3e42-3eb5-46fb-83db-4d819f5301eb.PNG)
+![frame5](https://user-images.githubusercontent.com/95358360/145856859-bda12886-4c7c-45f9-93ac-6e9375c9c35d.PNG)
  
 
 
