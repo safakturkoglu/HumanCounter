@@ -5,7 +5,7 @@ Bu projede canlı görüntüdeki kişileri sürekli olarak sayacak ve zaman graf
 
 
 ## Yolo
- YOLO, konvolüsyonel sinir ağlarını (CNN) kullanarak nesne tespiti yapan bir algoritmadır. YOLO algoritması çalışmaya başladığında görüntülerdeki veya videolardaki nesneleri ve bu nesnelerin koordinatlarını aynı anda tespit eder. 
+ YOLO, konvolüsyonel sinir ağlarını kullanarak nesne tespiti yapan bir algoritmadır. YOLO algoritması çalışmaya başladığında görüntülerdeki veya videolardaki nesneleri ve bu nesnelerin koordinatlarını aynı anda tespit eder. 
 Video ve resim işleme arasında tek fark resimlerin tek bir kareden (frame), videoların ise birçok kareden oluşmasıdır. Resimlerde algoritma tek bir kare için çalışırken, videolarda tüm kareler için tekrar tekrar çalışır.  
 
 ## Working Principle of YOLO Algorithm
