@@ -36,6 +36,7 @@ LABELS = open(labelsPath).read().strip().split("\n")
 
 np.random.seed(42)
 
+
 # Yolov3 weights and config path
 weightsPath = "./yolov3.weights"
 configPath = "./yolov3.cfg"
