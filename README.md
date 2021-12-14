@@ -22,6 +22,11 @@ If the confidence score is 0, there is no object there, and if it is 1, there is
  
  ![frame3](https://user-images.githubusercontent.com/95358360/145855367-61c8c461-17ab-45e2-bd1a-fd482b8ae107.PNG)
 
+## yolov3.weights
+
+Download official yolov3.weights and put it on top floder of project.
+
+https://pjreddie.com/media/files/yolov3.weights
 
 ### Colab between Drive Mount
 
