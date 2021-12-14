@@ -50,7 +50,7 @@ drive.mount('/content/gdrive')
 The total number of people and the current time are sent to the realtime database on firebase every 30 seconds. Then, every 30 seconds, the number of people and time data are taken from the realtime database in firebase. It is then graphically displayed on the website. 
 
 
-I used Google Firebase for the web page. Google Firebase; It is a platform that allows user login authorization and data to be kept in real time and synchronously without the need for the developer to deal with the server side of web and mobile applications. With the realtime database, the necessary information reaches the user. People in live view in this link [Times Square](https://www.youtube.com/watch?v=AdUw5RdyZxI ) are counted continuously and displayed on time graph.  
+I used Google Firebase for database. Google Firebase; It is a platform that allows user login authorization and data to be kept in real time and synchronously without the need for the developer to deal with the server side of web and mobile applications. With the realtime database, the necessary information reaches the user. People in live view in this link [Times Square](https://www.youtube.com/watch?v=AdUw5RdyZxI ) are counted continuously and displayed on time graph.  
 
 
 
