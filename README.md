@@ -1,7 +1,7 @@
 # Human Counter
 
 ## Aim of Project
-In this project, I developed an algorithm that will count the people in the live view continuously and display them on the time graph. I also used and developed some algorithms as a reference in this project. I wrote this project in Python and used the OpenCV library. After processing the image as a result of various algorithms, the user was informed via the web page with the data generated in real time. Data is transmitted to the user every 30 seconds. The user can access the date, time and total number of people on the chart.
+In this project, I developed an algorithm that will count the people in the live view continuously and display them on the time graph. I also used and developed some algorithms as a reference in this project. I wrote this project in Python and used the OpenCV library. I used Python to send data to database and I did this with HTML codeA. fter processing the image as a result of various algorithms, the user was informed via the web page with the data generated in real time. Data is transmitted to the user every 30 seconds. The user can access the date, time and total number of people on the chart.
 
 
 ## YOLO
@@ -46,7 +46,13 @@ drive.mount('/content/gdrive')
 
 
 ## Firebase
-Google Firebase; It is a platform that allows user login authorization and data to be kept in real time and synchronously without the need for the developer to deal with the server side of web and mobile applications. With the realtime database, the necessary information reaches the user. People in live view in this link [Times Square](https://www.youtube.com/watch?v=AdUw5RdyZxI ) are counted continuously and displayed on time graph.
+
+The total number of people and the current time are sent to the realtime database on firebase every 30 seconds. Then, every 30 seconds, the number of people and time data are taken from the realtime database in firebase. It is then graphically displayed on the website. 
+
+
+I used Google Firebase for the web page. Google Firebase; It is a platform that allows user login authorization and data to be kept in real time and synchronously without the need for the developer to deal with the server side of web and mobile applications. With the realtime database, the necessary information reaches the user. People in live view in this link [Times Square](https://www.youtube.com/watch?v=AdUw5RdyZxI ) are counted continuously and displayed on time graph.  
+
+
 
 
 
