@@ -26,7 +26,8 @@ If the confidence score is 0, there is no object there, and if it is 1, there is
 
 Download official yolov3.weights and put it on top floder of project.
 
-https://pjreddie.com/media/files/yolov3.weights
+
+[yolov3.weights](https://pjreddie.com/media/files/yolov3.weights)
 
 ### Colab between Drive Mount
 
