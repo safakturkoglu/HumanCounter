@@ -1,7 +1,7 @@
 # Human Counter
 
 ## Aim of Project
-In this project, I developed an algorithm that will count the people in the live view continuously and display them on the time graph. I also used and developed some algorithms as a reference in this project. I wrote this project in Python and used the OpenCV library. I used Python to send data to database and I did this with HTML code. After processing the image as a result of various algorithms, the user was informed via the web page with the data generated in real time. Data is transmitted to the user every 30 seconds. The user can access the date, time and total number of people on the chart.
+In this project, I developed an algorithm that will count the people in the live view continuously and display them on the time graph. I also used and developed some algorithms as a reference in this project. I wrote this project in Python and used the OpenCV library. I used Python to send data to database. I used javascript to pull the data and I did this with HTML code. After processing the image as a result of various algorithms, the user was informed via the web page with the data generated in real time. Data is transmitted to the user every 30 seconds. The user can access the date, time and total number of people on the chart.
 
 
 ## YOLO
