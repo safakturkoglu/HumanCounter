@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!--
-    Sayfa ile ilgili genel bilgiler ve kütüphaneler
+    about the page general information and libraries
 -->
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 </head>
 
 <!--
-    Arayüz tasarımı ve scriptler
+    Interface design and scripts
 -->
 <body>
     
@@ -24,10 +24,10 @@
 
     <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
     
-    <!-- Fonksiyonlar ve işlemlerin bulunduğu script -->
+    <!-- Script containing functions and operations -->
     <script>
 
-        //Firebase'e bağlanmak için gerekli config dosyaları
+        // required config files to connect to Firebase
         const firebaseConfig = {
             apiKey: "AIzaSyCoXWDX9k8Thj5S0TSbufOB3eCnJip-bdg",
             authDomain: "humancounter-eefad.firebaseapp.com",
@@ -45,7 +45,7 @@
         time_array = [];
         count_array = [];
 
-        //Firebase'deki verileri çekmek ve grafik oluşturmak için oluşturulan fonksiyon
+        // Data is pulled from Firebase and function created for graph
         function FetchAllDataAndChart() {
             firebase.database().ref('Counter').once('value', function (snapshot) {
                 snapshot.forEach(
@@ -86,7 +86,7 @@
         //Fonksiyonu çalıştırma
         FetchAllDataAndChart();
 
-        //30 saniyede bir sayfa yenilenir ve Firebase'den veriler çekilir.
+        //Every 30 seconds the page is refreshed and data is pulled from Firebase.
         setTimeout(function () {
             window.location.reload(1);
         }, 30000);
